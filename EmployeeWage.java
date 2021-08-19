@@ -1,11 +1,12 @@
 class Employee{
-    final int PRESENT ,wage_per_hour,full_day_duration,part_time_hout,full_time;
+    final int PRESENT ,wage_per_hour,full_day_duration,part_time_hout,full_time,totoal_working_days;
     Employee(){
           PRESENT = 1;
           full_time=0;
           wage_per_hour=20;
           full_day_duration=8;
           part_time_hout=4;//part time wage 
+          totoal_working_days=20;
 
 
     }
@@ -13,17 +14,20 @@ class Employee{
         int var = (int) (Math.random() * 10) % 2,full_time=0;
         int daily_wage;
         if (var == PRESENT)
-            {System.out.println(" Employee is Present");
+            {
+                System.out.println(" Employee is Present");
             //PrintEMPEage();
+            
         
             switch(full_time)
             {
                 case(1):
-                    daily_wage=wage_per_hour*full_day_duration;
+
+                    daily_wage=wage_per_hour*full_day_duration*totoal_working_days;
                     System.out.println(daily_wage);
                     break;
                 case 0:
-                    daily_wage=part_time_hout*wage_per_hour;
+                    daily_wage=part_time_hout*wage_per_hour*totoal_working_days;
                     System.out.println(daily_wage);
                     break;
 
