@@ -1,10 +1,11 @@
 class Employee{
-    final int PRESENT ,wage_per_hour,full_day_duration;
+    final int PRESENT ,wage_per_hour,full_day_duration,part_time_hout;
     Employee(){
           PRESENT = 1;
           
           wage_per_hour=20;
           full_day_duration=8;
+          part_time_hout=4;//part time wage 
 
 
     }
