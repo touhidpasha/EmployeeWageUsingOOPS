@@ -6,7 +6,7 @@ class Employee{
           wage_per_hour=20;
           full_day_duration=8;
           part_time_hout=4;//part time wage 
-          totoal_working_days=20;
+          totoal_working_days=20; // number of working days added
 
 
     }
@@ -52,7 +52,7 @@ public class EmployeeWage{
         
         System.out.println("welcome to emp wage problem");
         Employee emp1=new Employee();
-        emp1.IsEmpPresent();
+        emp1.IsEmpPresent();  //this is the class method to fetch data
 }
 
     
