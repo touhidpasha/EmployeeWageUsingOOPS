@@ -1,23 +1,39 @@
+import java.util.Scanner;
+
 class Employee{
-    final int PRESENT ,wage_per_hour,full_day_duration,part_time_hout,full_time,totoal_working_days;
+    final int PRESENT,full_day_duration,part_time_hout,full_time ;
+    int totoal_working_days ,wage_per_hour;
+    int[] cam1=new int[]{20,15};//wage and working days of company1 respectively;
+    int[] cam2=new int[]{25,20};
     Employee(){
           PRESENT = 1;
           full_time=0;
-          wage_per_hour=20;
+          //wage_per_hour=20;
           full_day_duration=8;
           part_time_hout=4;//part time wage 
-          totoal_working_days=20; // number of working days added
-
-
+          //totoal_working_days=20; // number of working days added
+          
     }
     public void IsEmpPresent(){
         int var = (int) (Math.random() * 10) % 2,full_time=0;
-        int daily_wage;
+        int flag,daily_wage;
+        Scanner sc=new Scanner(System.in);
         if (var == PRESENT)
             {
+                System.out.println(" Enter 1 if emp belong to comapny1 or else for any other company");
+                flag=sc.nextInt();
                 System.out.println(" Employee is Present");
             //PrintEMPEage();
-            
+            if(flag==1)
+            {
+                wage_per_hour=cam1[0];
+                totoal_working_days=cam1[1];
+
+            }
+            else{
+                wage_per_hour=cam2[0];
+                totoal_working_days=cam2[1];
+            }
         
             switch(full_time)
             {
@@ -49,6 +65,7 @@ public class EmployeeWage{
 
     
     public static void main(String[] args) {
+        
         
         System.out.println("welcome to emp wage problem");
         Employee emp1=new Employee();
