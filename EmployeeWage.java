@@ -52,7 +52,7 @@ public class EmployeeWage{
         
         System.out.println("welcome to emp wage problem");
         Employee emp1=new Employee();
-        emp1.IsEmpPresent();  //this is the class method to fetch data
+        emp1.IsEmpPresent();  //this is the class method to fetch data and class variables are inside class implementation
 }
 
     
