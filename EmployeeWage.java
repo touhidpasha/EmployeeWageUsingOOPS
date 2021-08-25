@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 class Employee{
-    final int PRESENT,full_day_duration,part_time_hout,full_time ;
-    int totoal_working_days ,wage_per_hour;
-    int[] cam1=new int[]{20,15};//wage and working days of company1 respectively;
+    final int PRESENT,full_day_duration,part_time_hout,full_time;
+    int totoal_working_days ,wage_per_hour,monthly_wage ;
+    int[] cam1=new int[]{20,24};//wage and working days of company1 respectively;
     int[] cam2=new int[]{25,20};
     Employee(){
           PRESENT = 1;
@@ -20,7 +20,7 @@ class Employee{
         Scanner sc=new Scanner(System.in);
         if (var == PRESENT)
             {
-                System.out.println(" Enter 1 if emp belong to comapny1 or else for any other company");
+                System.out.println(" Enter 1 if emp belong to comapny-X or else for any other company-Y");
                 flag=sc.nextInt();
                 System.out.println(" Employee is Present");
             //PrintEMPEage();
@@ -38,13 +38,16 @@ class Employee{
             switch(full_time)
             {
                 case(1):
-
-                    daily_wage=wage_per_hour*full_day_duration*totoal_working_days;
-                    System.out.println(daily_wage);
+                    daily_wage=wage_per_hour*full_day_duration;
+                    monthly_wage=wage_per_hour*full_day_duration*totoal_working_days;
+                    System.out.println("daily wage of this person in company X is "+daily_wage);
+                    System.out.println("monthly wage of this person in company X is "+ monthly_wage);
                     break;
                 case 0:
-                    daily_wage=part_time_hout*wage_per_hour*totoal_working_days;
-                    System.out.println(daily_wage);
+                    daily_wage=wage_per_hour*full_day_duration;
+                    monthly_wage=part_time_hout*wage_per_hour*totoal_working_days;
+                    System.out.println("daily wage of this person in company Y is "+ daily_wage);
+                    System.out.println("monthly wage of this person in company X is "+ monthly_wage);
                     break;
 
                   
